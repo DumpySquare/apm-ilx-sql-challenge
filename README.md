@@ -2,7 +2,12 @@
 An iRulesLX extension for BIG-IP APM to query a SQL Server database for challenge questions
 
 # cautionary note
-This solution is meant to be used as an example to enhance an existing APM flow that includes proper Authentication & Authorization. This policy should not be considered an appropriate security measure when used by itself. It should only be considered as a fallback or additional challenge in a Multifactor Auth (MFA) environment.
+This solution is intended to be used as an example to enhance an existing APM flow that already includes proper Authentication & Authorization. This policy should not be considered an appropriate security measure when used by itself. It should only be considered as a fallback or additional challenge in a Multifactor Auth (MFA) environment.
+
+# requirements
+- A BIG-IP with iRules LX and APM modules licensed. BIG-IP 13.1.1 was used for the creating and exporting of policies, but other versions should work fine as long as they are greater than 12.x
+- SQL Server database that the BIG-IP can connect to
+- A BIG-IP virtual server for testing
 
 # usage
 
@@ -55,7 +60,7 @@ In the LX Workspaces page, click on the workspace you created
 
 <img width="800px" src="img/9.png"/>
 
-Click on the index.js file on the left. On the right panel, update the SQL Server connection variables. Click Save File, then click Reload From Workspace. Click OK on the dialog that follows.
+Click on the index.js file on the left. On the right panel, update the SQL Server connection variables at minimum. If you need to alter the SQL Server queries that are called from this extension, you may also do so. Click Save File, then click Reload From Workspace. Click OK on the dialog that follows.
 
 <img width="800px" src="img/10.png"/>
 
