@@ -6,7 +6,7 @@ This solution is intended to be used as an example to enhance an existing APM fl
 
 # requirements
 - A BIG-IP with iRules LX and APM modules licensed. BIG-IP 13.1.1 was used for the creating and exporting of policies, but other versions should work fine as long as they are greater than 12.x
-- SQL Server database that the BIG-IP can connect to
+- SQL Server database that the BIG-IP can connect to. You may use the scripts in the [scripts](scripts/) folder to create the Challenges table and GetChallenge stored proceedure that this example code uses. Once the table exists, populate it with Questions/Answers. Questions with single word answers are ideal for this application. [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017) is a great tool for managing SQL Server databases.
 - A BIG-IP virtual server for testing
 
 # usage
