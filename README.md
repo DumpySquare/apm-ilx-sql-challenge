@@ -1,15 +1,14 @@
 # apm-ilx-sql-challenge
-An iRulesLX extension for BIG-IP APM to query a SQL Server database for challenge questions
+An iRulesLX extension written in JavaScript for hosting on F5 BIG-IP's NodeJS engine. F5's [Access Policy Manager](https://www.f5.com/products/security/access-policy-manager) (APM) integrates with this extension to query a SQL Server database for challenge questions during user authentication. While this example was created to integrate with Microsoft's SQL Server, this solution could easily be adapted to integrate with Oracle, Redis, MongoDB, etc.
 
-# cautionary note
-This solution is intended to be used as an example to enhance an existing APM flow that already includes proper Authentication & Authorization. This policy should not be considered an appropriate security measure when used by itself. It should only be considered as a fallback or additional challenge in a Multifactor Auth (MFA) environment.
+This solution is intended to be used as an example to enhance an existing APM flow that already includes proper authentication & authorization schemes. This policy should not be considered an appropriate security measure when used by itself. It should only be considered as a fallback or additional challenge in a Multifactor Auth (MFA) environment.
 
-# requirements
+# Requirements
 - A BIG-IP with iRules LX and APM modules licensed. BIG-IP 13.1.1 was used for the creating and exporting of policies, but other versions should work fine as long as they are greater than 12.x
 - SQL Server database that the BIG-IP can connect to. You may use the scripts in the [sql-scripts](sql-scripts/) folder to create the Challenges table and GetChallenge stored proceedure that this example code uses. Once the table exists, populate it with Questions/Answers. Questions with single word answers are ideal for this application. [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017) is a great tool for managing SQL Server databases.
 - A BIG-IP virtual server for testing
 
-# usage
+# Usage
 
 When the user connects to the virtual server with the policy, they will be challenged with a question to answer. 
 
@@ -32,13 +31,13 @@ The access policy
 <img width="800px" src="img/5.png"/>
 
 
-# learning
+# Learning
 
 [Getting started with iRulesLX](https://devcentral.f5.com/articles/getting-started-with-irules-lx-introduction-conceptual-overview-20409)
  
 [Introduction to iRulesLX Lab](https://clouddocs.f5.com/training/community/irules/html/class3/class3.html)
  
-# setup 
+# Setup 
 Provision the iRulesLX and APM modules on your BIG-IP if not already provisioned. (NOTE: perform this during a maintenance window; it will restart some BIG-IP services)
 
 <img width="800px" src="img/6.png"/>
