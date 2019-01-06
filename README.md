@@ -42,7 +42,7 @@ Provision the iRulesLX and APM modules on your BIG-IP if not already provisioned
 
 <img width="800px" src="img/6.png"/>
 
-Import the (sql_challenge_ilx_workspace.tgz) iRulesLX workspace in the UI as pictured. Name the workspace whatever you prefer.
+Import the (dist/sql_challenge_ilx_workspace.tgz) iRulesLX workspace in the UI as pictured. Name the workspace whatever you prefer.
 
 <img width="800px" src="img/7a.png"/>
 <img width="800px" src="img/7b.png"/>
@@ -67,7 +67,7 @@ Import the Per-Session Access Policy
 
 <img width="1000px" src="img/11.png"/>
 
-Name the policy as you wish, then select the (apm_profile_Common_sql_challenge.conf.tar.gz) and click the Import button
+Name the policy as you wish, then select the (dist/apm_profile_Common_sql_challenge.conf.tar.gz) and click the Import button
 
 <img width="800px" src="img/12.png"/>
 
