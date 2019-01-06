@@ -8,7 +8,7 @@ This solution is intended to be used as an example to enhance an existing APM fl
 - SQL Server database that the BIG-IP can connect to. You may use the scripts in the [sql-scripts](sql-scripts/) folder to create the Challenges table and GetChallenge stored proceedure that this example code uses. Once the table exists, populate it with Questions/Answers. Questions with single word answers are ideal for this application. [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-2017) is a great tool for managing SQL Server databases.
 - A BIG-IP virtual server for testing
 
-# Usage
+# What does it do?
 
 When the user connects to the virtual server with the policy, they will be challenged with a question to answer. 
 
@@ -31,12 +31,6 @@ The access policy
 <img width="800px" src="img/5.png"/>
 
 
-# Learning
-
-[Getting started with iRulesLX](https://devcentral.f5.com/articles/getting-started-with-irules-lx-introduction-conceptual-overview-20409)
- 
-[Introduction to iRulesLX Lab](https://clouddocs.f5.com/training/community/irules/html/class3/class3.html)
- 
 # Setup 
 Provision the iRulesLX and APM modules on your BIG-IP if not already provisioned. (NOTE: perform this during a maintenance window; it will restart some BIG-IP services)
 
@@ -88,3 +82,12 @@ Select the sql_challenge_irule, move it to the Enabled box by clicking the << bu
 <img width="1000px" src="img/16.png"/>
 
 Finally, browse to the ip address or hostname of your virtual server to see the SQL Challenge in action!
+
+# Supplemental Learning
+
+[F5 Access Policy Manager](https://www.f5.com/products/security/access-policy-manager)
+
+[Getting started with iRulesLX](https://devcentral.f5.com/articles/getting-started-with-irules-lx-introduction-conceptual-overview-20409)
+ 
+[Introduction to iRulesLX Lab](https://clouddocs.f5.com/training/community/irules/html/class3/class3.html)
+ 
